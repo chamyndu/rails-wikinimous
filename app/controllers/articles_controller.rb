@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
     # creating an article
     Article.create(article_params)
     # redirecting to index of articles
-    redirect_to task_path
+    redirect_to article_path
   end
 
   def edit
@@ -23,12 +23,12 @@ class ArticlesController < ApplicationController
 
   def update
     @article.update(article_params)
-    redirect_to task_path(@article)
+    redirect_to article_path(@article)
   end
 
   def destroy
     @article.destroy
-    redirect_to task_path
+    redirect_to article_path
   end
 
 
