@@ -1,0 +1,11 @@
+<%= link_to "post new article", new_article_path %>
+<h1>ArticlesDotAll</h1>
+
+<% @articles.each do |article| %>
+  <h2><%= link_to article.title, article_path(article) %></h2>
+  <h3><%= link_to article.content, article_path(article) %></h3>
+  <%= link_to "update article", edit_article_path(article) %>
+  <%= link_to "delete article", article_path(article), method: :delete %>
+<% end %>
+
+

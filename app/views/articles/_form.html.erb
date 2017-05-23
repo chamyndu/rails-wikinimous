@@ -1,0 +1,18 @@
+<%= form_for(@article) do |f|%>
+  <ul>
+    <ol>
+      <%= link_to "go home", articles_path %>
+    </ol>
+    <ol>
+      <%= f.label :title, "your article" %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </ol>
+    <ol>
+      <%= f.label :content, "add content" %>
+      <%= f.text_area :content, class: 'form-control' %>
+    </ol>
+    <ol>
+      <%= f.submit %>
+    </ol>
+  </ul>
+<% end %>
